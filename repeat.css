@@ -1,0 +1,60 @@
+:root {
+    --colour-one: #41b3a3;
+    --color-two: #f64c72;
+    --colour-three: #fc4445;
+
+    --colour-four: #66fcf1;
+    --colour-five: #ffe400;
+    --colour-six:#8860d0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.menu {
+    flex: 1;
+    padding: 20px;
+}
+
+.main {
+    flex: 3;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+#feedback {
+    margin-top: 10px;
+}
+
+#score {
+    margin-top: 20px;
+    text-align: right;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empowering Speech: Slow and Smooth Speech Exercise</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <style>
+        * {
+            font-family: cursive;
+        }
+        body {
+            background-image: url(image/WordRepetation.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        img {
+            margin-top: 150px;
+        }
+        .sentence-container {
+            border: 2px solid #000000;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f7f7f7;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+            text-align: center;
+        }
+        #progress-bar {
+            height: 20px;
+            margin-top: 20px;
+            border-color: black;
+            border-width: 2px;
+            border-style: solid;
+        }
+        #progress-bar .progress-bar {
+            transition: width 0.5s ease-in-out;
+        }
+
+        #next-button,
+        #stop-button {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+        #completion-message,
+        #result-message {
+            font-size: 24px;
+            margin-top: 20px;
+            padding-bottom: 15px;
+        }
+        #result-message {
+            font-weight: bold;
+            color: red;
+        }
+        #result-message.success {
+            color: green;
+        }
+        header {
+            background-color: #3498db;
+        }
+        header h1 {
+            font-size: 36px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: aliceblue;
+            color: #333;
+        }
+        .outer-div {
+            margin-top: 10%;
+            border-color: black;
+            border-width: 2px;
+            border-style: solid;
+            width: 40%;
+            margin-left: 30%;
+            border-radius: 10px;
+            box-shadow: 2px 4px 7px rgb(0, 0, 0, 0.7);
+            background-color: rgba(255, 255, 255, 0.8);
+            filter: drop-shadow(0.3) blur(0.4);
+        }
+    </style>
+    <header class="bg-primary text-white py-4">
+        <div class="container">
+            <h1 class="text-center">Slow and Smooth Speech Exercise</h1>
+        </div>
+    </header>
+    <div class="outer-div">
+        <div class="container mt-5">
+            <section class="exercise">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7">
+                        <div style="border-width: 2px;border-color: black;border-style: solid;"
+                            class="sentence-container bg-light border rounded p-4">
+                            <p id="sentence" class="text-center mb-0"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center mt-4">
+                    <div class="col-lg-7">
+                        <div id="progress-bar" class="progress">
+                            <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuenow="0"
+                                aria-valuemin="0" aria-valuemax="100">0%</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center mt-4">
+                    <div class="col-lg-7">
+                        <button id="next-button" class="btn btn-primary btn-block">Start Exercise</button>
+                        <button id="stop-button" class="btn btn-danger btn-block d-none">Stop Exercise</button>
+                    </div>
+                </div>
+                <div class="row justify-content-center mt-4">
+                    <div class="col-lg-6">
+                        <div id="completion-message" class="text-center text-success mb-0 d-none"></div>
+                        <div style="color: green;" id="result-message" class="text-center text-danger mb-0 d-none">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

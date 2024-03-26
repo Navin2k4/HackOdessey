@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Breath</title>
+    <link rel="stylesheet" href="learnstyle.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+    <style>
+        .container {
+            display: flex;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #video-player {
+            width: 100%;
+        }
+
+        .description {
+            padding-left: 40px;
+            padding-top: 10%;
+            width: 40%;
+        }
+
+        .description h4 {
+            font-size: 1.6rem;
+        }
+
+        .description p {
+            font-size: 1.3rem;
+            text-align: left;
+        }
+
+
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        .button-img {
+            object-fit: cover;
+            height: 200px;
+            width: 300px;
+        }
+
+        .video-container {
+            width: 60%;
+            margin-right: 20px;
+            position: relative;
+            padding-top: 56.25%;
+        }
+
+        #video-player {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h3 class="learnpath--title">Dive into Breathing Practice</h3>
+
+        <div class="container">
+            <div class="video-container">
+                <video id="video-player" src="video1.mp4" controls="false" autoplay></video>
+            </div>
+            <div class="description">
+                <h4>Deep Breathing Exercise</h4>
+                <p>This video guides you through deep breathing exercises aimed at promoting relaxation and reducing
+                    stress. Learn how to
+                    take slow, deep breaths to calm your mind and body, allowing for a sense of peace and tranquility
+                </p>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="video1-btn" class="btn btn-primary video-btn" data-src="video1.mp4"
+                data-title="Deep Breathing Exercise"
+                data-description="This video guides you through deep breathing exercises aimed at promoting relaxation and reducing stress. Learn how to take slow, deep breaths to calm your mind and body, allowing for a sense of peace and tranquility">
+                <img class="button-img" src="image/v1img.png" alt="">
+
+            </button>
+
+            <button id="video2-btn" class="btn btn-secondary video-btn" data-src="video2.mp4"
+                data-title="Mindful Breathing Meditation"
+                data-description="Explore the practice of mindful breathing meditation in this video. Discover how to focus your attention on the sensation of your breath as it moves in and out of your body, cultivating present-moment awareness and inner calm.">
+                <img class="button-img" src="image/v2img.png" alt="">
+
+            </button>
+
+            <button id="video3-btn" class="btn btn-success video-btn" data-src="video3.mp4"
+                data-title="Diaphragmatic Breathing Technique"
+                data-description="Join this instructional video to learn the diaphragmatic breathing technique, also known as belly breathing. Discover how to engage your diaphragm to take slow, deliberate breaths, promoting relaxation, stress reduction, and improved oxygen flow.">
+                <img class="button-img" src="image/v3img.png" alt="">
+
+            </button>
+
+            <button id="video4-btn" class="btn btn-danger video-btn" data-src="video4.mp4"
+                data-title="Box Breathing Exercise"
+                data-description="In this video, you'll be introduced to the box breathing technique, a simple yet powerful practice used to regulate breathing patterns and promote relaxation. Follow along as you inhale, hold, exhale, and hold your breath in a rhythmic pattern, fostering a sense of balance and calmness.">
+                <img class="button-img" src="image/v4img.png" alt="">
+
+            </button>
+        </div>
+    </center>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var videoPlayer = document.getElementById('video-player');
+        var videoDescription = document.querySelector('.description h4');
+        var videoDescriptionText = document.querySelector('.description p');
+        var buttons = document.querySelectorAll('.video-btn');
+
+        buttons.forEach(function (button) {
+            button.addEventListener('click', function () {
+                var videoSrc = this.getAttribute('data-src');
+                var descriptionTitle = this.getAttribute('data-title');
+                var descriptionText = this.getAttribute('data-description');
+
+                videoPlayer.src = videoSrc;
+
+                videoDescription.textContent = descriptionTitle;
+                videoDescriptionText.textContent = descriptionText;
+            });
+        });
+    });
+</script>
+
+
+</html>

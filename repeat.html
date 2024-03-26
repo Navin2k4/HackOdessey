@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stuttering Helper</title>
+    <link rel="stylesheet" href="repeat.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="menu">
+            <h2>Words Learned</h2>
+            <ul id="wordList">
+                <!-- Words will be dynamically added here -->
+            </ul>
+        </div>
+        <div class="main">
+            <h1>Repeat Yourself</h1>
+            <p id="sentence"></p>
+            <div id="progress-bar">
+                <div class="progress-bar" style="width: 0%;">0%</div>
+            </div>
+            <button id="next-button">Start</button>
+            <button id="stop-button" class="d-none">Stop</button>
+            <div id="completion-message" class="d-none"></div>
+            <div id="result-message" class="d-none"></div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="repeatscript.js"></script>
+</body>
+
+</html>
